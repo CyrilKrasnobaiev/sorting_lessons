@@ -1,8 +1,8 @@
 package Math_operations;
 import java.util.Arrays;
 
-import static Math_operations.AddMatrix.matrixAdd;
-import static Math_operations.MatrixDeterminant.determinant;
+import static Math_operations.MatrixOperations.determinant;
+import static Math_operations.MatrixOperations.matrixAdd;
 
 /**
  * Created by kirillk on 06.04.17.
@@ -49,7 +49,7 @@ public class Main {
 
     public static void main(String[] args){
         System.out.println("Matrix Multiple Operation:");
-        MultipleMatrix.matrixMultiple(MatrixOne, MatrixTwo);
+        MatrixOperations.matrixMultiple(MatrixOne, MatrixTwo);
         System.out.println();
         System.out.println("Matrix Add Operation:");
         matrixAdd(Matrix1,Matrix2);
