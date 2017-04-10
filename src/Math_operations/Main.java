@@ -1,8 +1,13 @@
 package Math_operations;
 import java.util.Arrays;
 
-import static Math_operations.AddMatrix.matrixAdd;
-import static Math_operations.MatrixDeterminant.determinant;
+import static Math_operations.MatrixOperations.determinant;
+import static Math_operations.MatrixOperations.matrixAdd;
+import static Math_operations.MatrixOperations.matrixMultiple;
+import static Math_operations.PrimitiveTypesAndWrapperClasses.PrimitiveTypes;
+import static Math_operations.VectorOperations.vectorAdd;
+import static Math_operations.VectorOperations.vectorMultiple;
+
 
 /**
  * Created by kirillk on 06.04.17.
@@ -49,7 +54,7 @@ public class Main {
 
     public static void main(String[] args){
         System.out.println("Matrix Multiple Operation:");
-        MultipleMatrix.matrixMultiple(MatrixOne, MatrixTwo);
+        matrixMultiple(MatrixOne, MatrixTwo);
         System.out.println();
         System.out.println("Matrix Add Operation:");
         matrixAdd(Matrix1,Matrix2);
@@ -58,9 +63,11 @@ public class Main {
         determinant(MainMatrix);
         System.out.println();
         System.out.println("Vector Multiple Operation");
-        System.out.println(Arrays.toString(VectorMultiplication.vectorMultiple(Vector1,Vector2)));
+        System.out.println(Arrays.toString(vectorMultiple(Vector1,Vector2)));
         System.out.println();
         System.out.println("Vector Add Operation");
-        System.out.println(Arrays.toString(AddVector.vectorAdd(V1,V2)));
+        System.out.println(Arrays.toString(vectorAdd(V1,V2)));
+        System.out.println();
+        PrimitiveTypes();
     }
 }
