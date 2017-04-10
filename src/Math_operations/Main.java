@@ -1,13 +1,8 @@
 package Math_operations;
-import java.util.Arrays;
 
 
-import static Math_operations.MatrixOperations.matrixAdd;
-import static Math_operations.MatrixOperations.matrixMultiple;
-import static Math_operations.MatrixPolimorf.determinant;
 import static Math_operations.PrimitiveTypesAndWrapperClasses.PrimitiveTypes;
-import static Math_operations.VectorOperations.vectorAdd;
-import static Math_operations.VectorOperations.vectorMultiple;
+
 
 
 /**
@@ -37,10 +32,6 @@ public class Main {
             {8, 0}
     };
 
-    //variables for vectorAdd method
-    static final int[] V1 = {10, 11};
-    static final int[] V2 = {30, 33};
-
     //variables for determinant method
     static final int[][] MAIN_MATRIX = {
             {4, 6, 8},
@@ -58,23 +49,53 @@ public class Main {
     static final int [] VECTOR_1 = {2, 5};
     static final int [] VECTOR_2 = {8, 4};
 
+    //variables for vectorAdd method
+    static final int[] V_1 = {10, 11};
+    static final int[] V_2 = {30, 33};
+
+    //variables for vectorMinus method
+    static final int[] VE_1 = {54, 5};
+    static final int[] VE_2 = {33, 12};
+
+    //variables for vectorDivide method
+    static final int[] VEC_1 = {342, 543};
+    static final int[] VEC_2 = {544, 776};
+
 
     public static void main(String[] args){
+        MatrixOperations obj1 = new MatrixOperations();
+        VectorOperations obj2 = new VectorOperations();
+
+        VectorOperations obj3 = new OverridePolimorfizm();
+
         System.out.println("Matrix Multiple Operation:");
-        matrixMultiple(MATRIX_ONE, MATRIX_TWO);
+        obj1.matrixMultiple(MATRIX_ONE, MATRIX_TWO);
         System.out.println();
+
         System.out.println("Matrix Add Operation:");
-        matrixAdd(MATRIX_1,MATRIX_2);
+        obj1.matrixAdd(MATRIX_1,MATRIX_2);
         System.out.println();
+
         System.out.println("Matrix Determinant:");
-        determinant(MAIN_MATRIX, MAIN2_MATRIX);
+        obj1.determinant(MAIN_MATRIX, MAIN2_MATRIX);
         System.out.println();
+        obj1.determinant(MAIN_MATRIX);
+        System.out.println();
+
         System.out.println("Vector Multiple Operation");
-        System.out.println(Arrays.toString(vectorMultiple(VECTOR_1,VECTOR_2)));
+        obj2.vectorMultiple(VECTOR_1,VECTOR_2);
         System.out.println();
+
+        System.out.println("Vector Minus and Divide Operation");
+        obj3.vectorAdd(VE_1, VE_2);
+        obj3.vectorMultiple(VEC_1, VEC_2);
+        System.out.println();
+
         System.out.println("Vector Add Operation");
-        System.out.println(Arrays.toString(vectorAdd(V1,V2)));
+        obj2.vectorAdd(V_1,V_2);
         System.out.println();
+
+        System.out.println("Autoboxing and Unboxing");
         PrimitiveTypes();
     }
 }

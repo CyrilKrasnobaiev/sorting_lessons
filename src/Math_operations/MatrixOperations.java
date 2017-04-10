@@ -5,7 +5,7 @@ package Math_operations;
  */
 public class MatrixOperations {
     //multiple matrix method
-    public static void matrixMultiple(int[][] matrixOne, int[][] matrixTwo) {
+    void matrixMultiple(int[][] matrixOne, int[][] matrixTwo) {
         int strings = matrixOne.length;
         int columns = matrixTwo[0].length;
         int o = matrixTwo.length;
@@ -27,15 +27,28 @@ public class MatrixOperations {
     }
 
     //D = a11·a22·a33 + a12·a23·a31 + a13·a21·a32 - a13·a22·a31 - a11·a23·a32 - a12·a21·a33
-    static void determinant(int[][] main_matrix) {
+    void determinant(int[][] main_matrix) {
         int D = (main_matrix[0][0] * main_matrix[1][1] * main_matrix[2][2]) + (main_matrix[0][1] * main_matrix[1][2] * main_matrix[2][0]) +
                 (main_matrix[1][0] * main_matrix[2][1] * main_matrix[0][2]) - (main_matrix[0][2] * main_matrix[1][1] * main_matrix[2][0]) -
                 (main_matrix[1][2] * main_matrix[2][1] * main_matrix[0][0]) - (main_matrix[0][1] * main_matrix[2][0] * main_matrix[2][2]);
         System.out.println(D);
     }
 
+
+    public void determinant(int[][] main_matrix, int [][] main2_matrix) {
+        int determinant1 = (main_matrix[0][0] * main_matrix[1][1] * main_matrix[2][2]) + (main_matrix[0][1] * main_matrix[1][2] * main_matrix[2][0]) +
+                (main_matrix[1][0] * main_matrix[2][1] * main_matrix[0][2]) - (main_matrix[0][2] * main_matrix[1][1] * main_matrix[2][0]) -
+                (main_matrix[1][2] * main_matrix[2][1] * main_matrix[0][0]) - (main_matrix[0][1] * main_matrix[2][0] * main_matrix[2][2]);
+        int determinant2 = (main2_matrix[0][0] * main2_matrix[1][1] * main2_matrix[2][2]) + (main2_matrix[0][1] * main2_matrix[1][2] * main2_matrix[2][0]) +
+                (main2_matrix[1][0] * main2_matrix[2][1] * main2_matrix[0][2]) - (main2_matrix[0][2] * main2_matrix[1][1] * main2_matrix[2][0]) -
+                (main2_matrix[1][2] * main2_matrix[2][1] * main2_matrix[0][0]) - (main2_matrix[0][1] * main2_matrix[2][0] * main2_matrix[2][2]);
+        System.out.println(determinant1);
+        System.out.println();
+        System.out.println(determinant2);
+    }
+
     //method for matrix adding
-    public static void matrixAdd(int[][] matrix1, int[][] matrix2) {
+    void matrixAdd(int[][] matrix1, int[][] matrix2) {
 
         int m = matrix1.length;
         int n = matrix2.length;

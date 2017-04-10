@@ -11,7 +11,7 @@ public class PrimitiveTypesAndWrapperClasses {
         int d = (int) c;
         double e = d;
         byte a = (byte) e;
-        int i = b;
-        System.out.println(i);
+        int i = a;
+        System.out.println(i + b + " = 200");
     }
 }
