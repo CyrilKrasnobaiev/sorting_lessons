@@ -60,9 +60,5 @@ public class Queuey {
         System.out.println("Peaking: " + stacky.peek());
         System.out.println(stacky.pop() + "! ");
         System.out.println(stacky.size());
-
-
-
-
     }
 }
